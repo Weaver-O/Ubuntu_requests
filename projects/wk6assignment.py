@@ -1,10 +1,8 @@
 import requests #Importing the requests library to handle HTTP requests
 import os  #Importing the os library to interact with the operating system
 from urllib.parse import urlparse
-
-def Hello():
-    print("Welcome to my image downloader!")
-    print("You can download images from the web using this script\n")      
+print("Welcome to my image downloader!")
+print("You can download images from the web using this script\n")
 
 url = input("Enter the URL of the image to download: ") #Prompting the user to enter the URL of the image to download
 try:
@@ -34,7 +32,6 @@ except requests.exceptions.RequestException as e: #Handling exceptions related t
 except requests.exceptions.Timeout: #Handling timeout exceptions
     print("The request timed out. Please try again later.")
 
-if __name__ == "__Hello__":
-    Hello()
-
+print(f"Successfully completed the download of {filename}")
+print("Thank you for using the image downloader!")
 
